@@ -1,3 +1,6 @@
+!apt-get update --yes && apt-get install ffmpeg --yes
+!pip install -q git+https://github.com/huggingface/transformers.git
+
 import os
 from glob import glob as gb
 import os
@@ -7,6 +10,10 @@ import codefestImagenes as ci
 from PIL import Image
 import requests
 from transformers import CLIPProcessor, CLIPModel
+
+def convertir_video_a_imagen(video):
+    comando = f"ffmpeg -i {video} -vf fps=1 Imagenes/{video}/imagen_%04d_seg.jpg"
+    os.system(comando)
 
 def obtener_rutas_archivos(ubicacionCarpeta):
     ruta = os.path.abspath(ubicacionCarpeta)
@@ -35,3 +42,8 @@ def preEtiquetadoImagenes(listaubicaArchivos):
         etiquetado[imagen] = df
     with open("archivo-salida.json", "w") as outfile:
         json.dump(etiquetado, outfile)
+        
+def detect_objects_in_video(video_path, output_path):
+    convertir_video_a_imagen(video_path)
+    rutas = obtener_rutas_archivos(f"Imagenes/{video_path}/")
+    preEtiquetadoImagenes(rutas)
