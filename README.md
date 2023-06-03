@@ -30,7 +30,12 @@ Una vez instalada ffmpeg se procede a tomar los videos de la ubicación donde se
 
 !ffmpeg -i Videos/VideoCodefest_001-11min.mpg -vf fps=1 Imagenes/VideoCodefest_001-11min/imagen_%04d_seg.jpg
 
-
+# Cómo usar
+Para su uso:
+1. Es necesario descargar el proyecto
+2. Copiar el archivo codefestImagenes.py en la ruta del proyecto que necesita usar la libreria
+3. Llamar la funcion detect_objects_in_video(video_path, output_path) ingresando los respectivos atributos:
+   La salida donde se espera se escriba el json con el resultado
 
 
 ### Objetivo 2: Identificación de entidades en noticias
