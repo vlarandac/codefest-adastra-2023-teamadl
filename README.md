@@ -1,4 +1,5 @@
 
+
 ![logo](img/amazonas.jfif)
 
 # CODEFEST AD ASTRA 2023
@@ -13,7 +14,7 @@ Para el desarrollo de este reto se realizaron los siguientes pasos:
 1. Obtención de imágenes a partir de videos disponibles
 2. Taggeo de imágenes: de acuerdo con el requerimiento se procedio a utilizar la aplicación disponible en la págima [https://www.makesense.ai/](https://www.makesense.ai/) identificando Construcciones, Vehiculos, Deforestacion para poder entrenar el modelo.
 
-#### How to use
+# Cómo usar
 
 Enfoque de Zero-Shot (PreEtiquetado de Imagenes) - Objetivo realizar un etiquetado rapido y que permita descartar gran cantidad de imagenes que no aporten información valiosa a la generación de un modelo de detección de objetos posterior.
 
@@ -39,11 +40,25 @@ el cual es un modelo preentrenado para reconocimiento de Entidades.
 
 In a nutshell, WikiNEuRal consists in a novel technique which builds upon a multilingual lexical knowledge base (i.e., [BabelNet](https://babelnet.org/)) and transformer-based architectures (i.e., [BERT](https://arxiv.org/abs/1810.04805)) to produce high-quality annotations for multilingual NER. It shows consistent improvements of up to **6 span-based F1-score points against state-of-the-art alternative** data production methods on common benchmarks for NER. Moreover, in our paper we also present a new approach for creating **interpretable word embeddings** together with a **Domain Adaptation algorithm**, which enable WikiNEuRal to create **domain-specific training corpora**.
 
-#### How to use
-Para poder ejecutarlo se debe ingresar a la carpeta 
 
 
-# License 
+
+* Objetivo 2:
+Se crearon las funciones de ner_from_str y ner_from_file con la finalidad de obtener las entidades de los textos partiendo de una cadena de texto y un archivo respectivamente.
+
+
+# Cómo usar
+Para su uso:
+1. Es necesario descargar el proyecto
+2. Copiar el archivo codefestTextos.py en la ruta del proyecto que necesita usar la libreria
+3. Importar la funcion a usar, ya sea ner_from_str o ner_from_file de este archivo de la siguiente forma
+    from codefestTextos import ner_from_str, ner_from_file
+4. Llamar cualquiera de las dos funciones segun sea la necesidad con los siguientes atributos:
+    - Para el caso de querer obtener las entidades a partir de una cadena de texto, ingresa la cadena a procesar
+    - Para el caso de querer obtener las entidades a partir de un archivo, ingresar la ruta del archivo a procesar
+    Para el segundo atributo de ambas funciones se ingresar la ruta del archivo de salida donde se espera se escriba el json con el resultado
+
+# Licencia
 
 Este proyecto está licenciado bajo licencia MIT de código abierto.
 
