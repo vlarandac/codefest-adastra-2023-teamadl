@@ -12,7 +12,8 @@ Para el desarrollo de este reto se realizaron los siguientes pasos:
 
 1. Obtención de imágenes a partir de videos disponibles
 2. Taggeo de imágenes: de acuerdo con el requerimiento se procedio a utilizar la aplicación disponible en la págima [https://www.makesense.ai/](https://www.makesense.ai/) identificando Construcciones, Vehiculos, Deforestacion para poder entrenar el modelo.
-3. 
+
+#### How to use
 
 Enfoque de Zero-Shot (PreEtiquetado de Imagenes) - Objetivo realizar un etiquetado rapido y que permita descartar gran cantidad de imagenes que no aporten información valiosa a la generación de un modelo de detección de objetos posterior.
 
@@ -38,11 +39,8 @@ el cual es un modelo preentrenado para reconocimiento de Entidades.
 
 In a nutshell, WikiNEuRal consists in a novel technique which builds upon a multilingual lexical knowledge base (i.e., [BabelNet](https://babelnet.org/)) and transformer-based architectures (i.e., [BERT](https://arxiv.org/abs/1810.04805)) to produce high-quality annotations for multilingual NER. It shows consistent improvements of up to **6 span-based F1-score points against state-of-the-art alternative** data production methods on common benchmarks for NER. Moreover, in our paper we also present a new approach for creating **interpretable word embeddings** together with a **Domain Adaptation algorithm**, which enable WikiNEuRal to create **domain-specific training corpora**.
 
-
-
-
-
-# How to use
+#### How to use
+Para poder ejecutarlo se debe ingresar a la carpeta 
 
 
 # License 
